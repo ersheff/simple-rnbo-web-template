@@ -4,7 +4,7 @@ const setup = async () => {
   const WAContext = window.AudioContext;
   const context = new WAContext();
   
-  // get exported RNBO patcher file
+  // get exported RNBO patcher file (file name must match whatever is used during target export)
   const rawPatcher = await fetch("export/patch.export.json");
   const patcher = await rawPatcher.json();
 
