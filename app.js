@@ -32,9 +32,13 @@ const setup = async () => {
     e.target.disabled = true;
   };
 
-  // attach HTML UI element to RNBO device parameter 
+  // attach HTML UI elements to RNBO device parameters 
   document.getElementById("vol-slider").oninput = (e) => {
     device.parametersById.get("master-volume").value = e.target.value;
+  };
+
+  document.getElementById("freq-slider").oninput = (e) => {
+    device.parametersById.get("osc-frequency").value = e.target.value;
   };
   
 };
